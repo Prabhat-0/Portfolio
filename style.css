@@ -6,64 +6,104 @@
 }
 html{
     scroll-behavior: smooth;
-}
-.nav-container{
-    display:flex;
-    padding:0.5rem;
-    height:10%;
+}.nav-container {
+    display: flex;
+    padding: 0.5rem;
+    height: 10%;
     align-items: center;
-     background:teal;
+    background: teal;
+    position: relative; /* CRITICAL: Allows the mobile menu to position itself relative to this header */
 }
 
-.nav-logo{
-    padding-left:2%;
+.nav-logo {
+    padding-left: 2%;
 }
-.navbar{
-    padding:1.5rem;
-   display:flex;
-   justify-content: flex-end;
-   text-align:center;
-   float:right;
-   text-decoration: none;
-   flex:1;
-   
+
+.navbar {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-decoration: none;
+    flex: 1; /* Pushes the menu items to the far right on desktop */
 }
-li{
+
+li {
     list-style: none;
 }
-.navbar a{
+.navbar a {
     text-decoration: none;
-    margin:0.5em;
+    margin: 0.5em;
     padding: 0.5em 1em;
-    width:auto;
-    height: 1rem;
-    color:black;
+    width: auto;
+    
+    /* 1. Remove fixed height entirely so vertical padding handles the shape naturally */
+    /* height: 2rem; */ 
+    
+    color: black;
+    display: inline-block; 
+    
+    /* 2. Add an invisible border here so the layout doesn't shift on hover */
+    border: 2px solid transparent; 
+    border-radius: 9999px; /* Ready for the hover look */
+    
+    /* Optional: Makes color changes smooth instead of sudden */
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
+
 .navbar a:hover {
-    margin:0.5em;
-    padding: 0.5em 1em;
-    color:rgb(251, 251, 251);
-    width:auto;
-    height: 1rem;
+    color: rgb(251, 251, 251);
     background-color: rgba(246, 246, 246, 0.115);
-    border:2px solid rgb(13, 13, 13);
-    border-radius: 9999px;
+    
+    /* 3. Simply color the border that already exists in the base state */
+    border-color: rgb(13, 13, 13); 
+    
+    /* 4. Keep padding and height rules identical to the base state to avoid shifts */
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: font-size 0.3s ease;
 }
-@media (width<=680px){
-    .nav-container{
-        flex-direction: column;
-        padding:0.5rem;
+
+.hamburger-container {
+    cursor: pointer;
+    display: none; /* Hidden on desktop view */
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+/* --- Mobile View Adjustments (680px and below) --- */
+@media (max-width: 680px) {
+    .nav-container {
+        /* Keeps hamburger and logo separated properly on mobile */
+        justify-content: space-between; 
     }
-    .navbar{
+    
+    .hamburger-container {
+        display: flex; /* Restored to "flex" to accurately obey align-items inside your rule */
+    }
+
+    .navbar {
+        display: none; /* Explicitly hidden until JavaScript toggles it */
         flex-direction: column;
-        height:auto;
+        height: auto;
         align-items: center;
-        gap:1rem;
+        gap: 1rem;
+        
+        /* Mobile Dropdown Styling Positioning */
+        position: absolute;
+        top: 100%; /* Sits cleanly right under the teal header bar */
+        left: 0;
+        width: 100%;
+        background: teal; /* Matches your current container layout theme */
+        padding: 1rem 0;
+        z-index: 10; /* Guarantees it floats over background banner elements */
+    }
+
+    /* Target class that JavaScript toggles on click */
+    .navbar.active {
+        display: flex; 
     }
 }
+
 .contact-button{
     margin-top: 1rem;
     width:auto;
