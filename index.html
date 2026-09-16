@@ -20,13 +20,12 @@
 
             <h2 class="nav-logo">PORTFOLIO</h2>
             
-            <!-- Added id="nav-menu" -->
             <ul class="navbar" id="nav-menu">
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#skill">Skills</a></li>
+                <li><a href="#hero">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#project">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </Header>
@@ -38,7 +37,33 @@
                 <h1>Hello, I am <span>Prabhat Kumar</span></h1>
                 <span><p>I am a <h2>MERN Stack Developer</h2></p></span>
                 <p>I build robust, scalable, and secure web applications from scratch. By leveraging MongoDB, Express.js, React, and Node.js, I turn complex business ideas into high-performance digital products with exceptional user experiences.</p>
-                <button class="contact-button">Contact Me</button>
+                <button class="contact-button"><a href="#contact" class="contact-me-button">Contact Me</a></button>
+
+                <div class="mern-badges">
+                    <!-- MongoDB Link & Badge -->
+                    <a href="https://mongodb.com" target="_blank" rel="noopener noreferrer" class="badge mongodb">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY2dI7wxcSv4fVRJjVRikUbHV613vUXiR7QJM0dXKFLA&s  " alt="MongoDB Documentation">
+                    </a>
+                    
+                    <!-- Express.js Link & Badge -->
+                    <a href="https://expressjs.com" target="_blank" rel="noopener noreferrer" class="badge expressjs">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoCrSGOlY_BPN_UBADCTxoX5GC2QK1dGAE2lOtw9HItA&s=10" alt="Express.js Documentation">
+                    </a>
+                    
+                    <!-- React Link & Badge -->
+                    <a href="https://react.dev" target="_blank" rel="noopener noreferrer" class="badge react">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6x5vPIVP4NsU8yhkpRDHyupfp_7FNhWerS__KpHoSMA&s=10" alt="React Documentation">
+                    </a>
+                    
+                    <!-- Node.js Link & Badge -->
+                    <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer" class="badge nodejs">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlR5FxfBxFcM_dWOgq7mYujfaxIkuJ27C3dzLz27JGUQ&s=10" alt="Node.js Documentation">
+                    </a>
+                    <!--AWS logo -->
+                    <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer" class="badge nodejs">
+                        <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ZwJ63E2nt8CMP9zG_KXEXv8dbB6uKjKrm_YSOv1_Cg&s=10" alt="AWS Documentation">
+                    </a>
+            </div>
             </div>
             <div class="hero-image-container">
                 <img src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png" alt="DummyLogo">
@@ -144,6 +169,39 @@
 
     </section>
 
+    <section id="contact" class="contact-section">
+    <div class="contact-container">
+        <h2 class="contact-heading">Get In Touch</h2>
+        <p class="contact-subheading">Have a project in mind or want to collaborate? Feel free to reach out!</p>
+        
+        <div class="contact-grid">
+            <!-- Email Card -->
+            <a href="mailto:prabhat90024@.com" class="contact-card">
+                <div class="contact-icon">
+                    <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32">
+                        <rect width="20" height="16" x="2" y="4" rx="2"/>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                </div>
+                <h3>Email Me</h3>
+                <span class="contact-action">Send a message &rarr;</span>
+            </a>
+
+            <!-- Phone Card -->
+            <a href="tel:+917765945408" class="contact-card">
+                <div class="contact-icon">
+                    <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </div>
+                <h3>Call Me</h3>
+                <span class="contact-action">Let's talk &rarr;</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
     <footer>
         <div class="social-links">
             <!-- GitHub Link -->
@@ -160,23 +218,23 @@
             <p>@2026,Prabhat Kumar All Rights Reserved. ❤️</p>
         </div>
     </footer>
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
 
-  // 1. Toggle menu when hamburger icon is clicked
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
+            
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
 
-  // 2. Automatically close menu when an in-page navigation link is clicked
-  const navLinks = document.querySelectorAll('.navbar a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-    });
-  });
-</script>
+           
+            const navLinks = document.querySelectorAll('.navbar a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                });
+            });
+        </script>
 
 </body>
 </html>
