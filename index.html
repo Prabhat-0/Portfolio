@@ -7,7 +7,7 @@
     <title>PORTFOLIO</title>
 </head>
 <body>
-    <Header>
+    <Header class="header">
         <nav class="nav-container">
             
             <div class="hamburger-container" id="hamburger">
@@ -34,10 +34,10 @@
     <main>
         <section class="hero-container" id="hero">
             <div class="hero-article-container">
-                <h1>Hello, I am <span>Prabhat Kumar</span></h1>
-                <span><p>I am a <h2>MERN Stack Developer</h2></p></span>
-                <p>I build robust, scalable, and secure web applications from scratch. By leveraging MongoDB, Express.js, React, and Node.js, I turn complex business ideas into high-performance digital products with exceptional user experiences.</p>
-                <button class="contact-button"><a href="#contact" class="contact-me-button">Contact Me</a></button>
+                <h1>Hello, I am <span class="name">Prabhat Kumar</span></h1>
+                <p class="para-i">I am a</p><p class="para-str">MERN Stack Developer</p>
+                <p class="para-i">I build robust, scalable, and secure web applications from scratch. By leveraging MongoDB, Express.js, React, and Node.js, I turn complex business ideas into high-performance digital products with exceptional user experiences.</p>
+                <a href="#contact" class="contact-me-button contact-button">Contact Me</a>
 
                 <div class="mern-badges">
                     <!-- MongoDB Link & Badge -->
@@ -149,19 +149,29 @@
              <div class="project-card">
                 <h1>Zero</h1>
                 <article>A video Streaming Platform, on which you can watch the movies,webseries, etc.</article>
-                <img src="https://repository-images.githubusercontent.com/652767005/d19216ff-6905-4ed1-b5ee-82820b78006b" alt="#zero">
+
+                <div class="project-image-container">
+                    <img src="https://repository-images.githubusercontent.com/652767005/d19216ff-6905-4ed1-b5ee-82820b78006b" alt="#zero">
+                </div>
+                
             </div>
 
             <div class="project-card">
                 <h1>OniFood</h1>
                 <article>A platform where restaurant owner can register and  user can order through <strong>OniFood</strong></article>
-                <img src="https://cdn.dribbble.com/userupload/45641256/file/956d12c4fc4d74b6661e3641b15ec3c1.jpg?resize=752x&vertical=center" alt="">
+                <div class="project-image-container">
+                    <img src="https://cdn.dribbble.com/userupload/45641256/file/956d12c4fc4d74b6661e3641b15ec3c1.jpg?resize=752x&vertical=center" alt="">
+                </div>
+                
             </div>
 
             <div class="project-card">
                 <h1>DevTinder</h1>
                 <article>A friend finder platform where developers can make their accont and connect with similar intesrest persons</article>
-                <img src="https://dqy38fnwh4fqs.cloudfront.net/UH9OBABN8M8LLRGCDBAGOMBDNBRK/projects/devtinderf8e492e2-2e8b-46db-b7a5-3ae4993581a4" alt="">
+                <div class="project-image-container">
+                    <img src="https://dqy38fnwh4fqs.cloudfront.net/UH9OBABN8M8LLRGCDBAGOMBDNBRK/projects/devtinderf8e492e2-2e8b-46db-b7a5-3ae4993581a4" alt="">
+                </div>
+                
             </div>
         </div>
        
@@ -176,27 +186,35 @@
         
         <div class="contact-grid">
             <!-- Email Card -->
-            <a href="mailto:prabhat90024@.com" class="contact-card">
-                <div class="contact-icon">
+             <div class="contact-card">
+                    <div class="contact-icon">
                     <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32">
                         <rect width="20" height="16" x="2" y="4" rx="2"/>
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
                     </svg>
-                </div>
-                <h3>Email Me</h3>
-                <span class="contact-action">Send a message &rarr;</span>
-            </a>
+                    </div>
+                    <h3>Email Me</h3>
+                    <a href="mailto:prabhat90024@.com" >
+                        <span class="contact-action">Send a message &rarr;</span>
+                    </a>
 
+             </div>
+            
             <!-- Phone Card -->
-            <a href="tel:+917765945408" class="contact-card">
+
+            <div class="contact-card">
                 <div class="contact-icon">
                     <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
                 </div>
                 <h3>Call Me</h3>
-                <span class="contact-action">Let's talk &rarr;</span>
-            </a>
+                <a href="tel:+917765945408" >
+                
+                    <span class="contact-action">Let's talk &rarr;</span>
+                </a>
+            </div>
+            
         </div>
     </div>
 </section>
